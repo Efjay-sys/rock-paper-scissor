@@ -42,9 +42,12 @@ playGame();
 */
 
 //-----------------Code Copied from Google as reference----------------//
+  let rock = "rock";
+  let paper = "paper";
+  let scissor = "scissor";
 
-function getComputerChoice() 
+function getComputerChoice(rock, paper, scissor) 
 {
-  
+    
 };
-console.log(getComputerChoice);
+console.log(getComputerChoice)
