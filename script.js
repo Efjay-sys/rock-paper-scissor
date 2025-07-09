@@ -41,13 +41,45 @@ playGame();
 
 */
 
-//-----------------Code Copied from Google as reference----------------//
-  let rock = "rock";
-  let paper = "paper";
-  let scissor = "scissor";
+//-----------------Code Above Copied from Google as reference----------------//
+  
 
-function getComputerChoice(rock, paper, scissor) 
+ let computerChoice = function() 
 {
-    
+  let choices = ["rock", "paper", "scissor"];
+  let randomNumber = Math.floor(Math.random() * 3)
+return choices[randomNumber];
 };
-console.log(getComputerChoice)
+console.log(computerChoice())
+
+function  humanChoice()
+{
+  choices = ["rock", "paper", "scissor"];
+}
+ humanChoice = window.prompt("Enter Selection");
+
+/*#############*/
+
+const humanScore = 0;
+const computerScore = 0;
+
+/*#############*/
+
+
+let  playRound = function (computerChoice, humanChoice) 
+{
+if ( humanChoice === computerChoice
+)
+  return "Tie";
+
+else  if( 
+    (humanChoice  <= computerChoice))
+  return "you lose";
+
+else (
+  (humanChoice => computerChoice)
+)
+  return "you win";
+
+console.log();
+}
