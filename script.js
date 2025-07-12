@@ -1,5 +1,7 @@
 
-  /* function playGame() {
+ /*
+  
+  function playGame() {
   let playerScore = 0;
   let computerScore = 0;
   let tieScore = 0;
@@ -43,43 +45,52 @@ playGame();
 
 //-----------------Code Above Copied from Google as reference----------------//
   
+let choices = ["rock", "paper", "scissor"];
+
 
  let computerChoice = function() 
 {
   let choices = ["rock", "paper", "scissor"];
+
   let randomNumber = Math.floor(Math.random() * 3)
 return choices[randomNumber];
 };
 console.log(computerChoice())
 
-function  humanChoice()
+let humanChoice = function()
 {
-  choices = ["rock", "paper", "scissor"];
-}
- humanChoice = window.prompt("Enter Selection");
+choices = ["rock", "paper", "scissor"];
+};
+humanChoice = window.prompt("Enter Selection");
+console.log(humanChoice)
+
+if (humanChoice <= computerChoice) 
+  {
+  console.log("You Lose.")
+  }
+  else if (humanChoice >= computerChoice) 
+    {
+    console.log("You Win!");
+    } 
+  else (humanChoice === computerChoice)
+ {
+   console.log("Tie!");
+  } 
+
 
 /*#############*/
 
 const humanScore = 0;
 const computerScore = 0;
+const tieScore = 0;
 
 /*#############*/
 
-
-let  playRound = function (computerChoice, humanChoice) 
+function playRound(humanChoice, computerChoice) 
 {
-if ( humanChoice === computerChoice
-)
-  return "Tie";
-
-else  if( 
-    (humanChoice  <= computerChoice))
-  return "you lose";
-
-else (
-  (humanChoice => computerChoice)
-)
-  return "you win";
-
-console.log();
+if (humanChoice === computerChoice) {
+  return "Tie!";
 }
+}
+playRound();
+
