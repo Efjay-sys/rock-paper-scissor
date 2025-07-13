@@ -64,19 +64,38 @@ choices = ["rock", "paper", "scissor"];
 humanChoice = window.prompt("Enter Selection");
 console.log(humanChoice)
 
-if (humanChoice <= computerChoice) 
-  {
-  console.log("You Lose.")
-  }
-  else if (humanChoice >= computerChoice) 
-    {
-    console.log("You Win!");
-    } 
-  else (humanChoice === computerChoice)
- {
-   console.log("Tie!");
-  } 
+function playRound() {
 
+if ( 
+
+  (humanChoice === "rock" && computerChoice === "paper") ||
+  (humanChoice === "paper" && computerChoice === "scissor") ||
+  (humanChoice === "scissor" && computerChoice === "rock") )
+{
+  return console.log("You Lose!");
+}
+
+else if ( 
+ 
+  (humanChoice === "rock" && computerChoice === "scissor") ||
+  (humanChoice === "scissor" && computerChoice === "paper") ||
+  (humanChoice === "paper" && computerChoice === "rock") )
+ { 
+  return console.log("You Win!");
+ }
+
+else (
+
+  (humanChoice === "rock" && computerChoice === "rock") ||
+  (humanChoice === "scissor" && computerChoice === "scissor") ||
+  (humanChoice === "paper" && computerChoice === "paper") )
+{
+  return console.log("Tie!");
+}
+
+}
+
+playRound();
 
 /*#############*/
 
@@ -86,11 +105,5 @@ const tieScore = 0;
 
 /*#############*/
 
-function playRound(humanChoice, computerChoice) 
-{
-if (humanChoice === computerChoice) {
-  return "Tie!";
-}
-}
-playRound();
+
 
