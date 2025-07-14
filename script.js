@@ -59,41 +59,26 @@ console.log(computerChoice())
 
 let humanChoice = function()
 {
-choices = ["rock", "paper", "scissor"];
+let choices = ["rock", "paper", "scissor"];
+
 };
 humanChoice = window.prompt("Enter Selection");
 console.log(humanChoice)
 
 function playRound() {
 
-if ( 
+if (humanChoice === computerChoice);
+  {return "It is Tie!"};
+/*
+else  (
 
-  (humanChoice === "rock" && computerChoice === "paper") ||
-  (humanChoice === "paper" && computerChoice === "scissor") ||
-  (humanChoice === "scissor" && computerChoice === "rock") )
-{
-  return console.log("You Lose!");
-}
+   humanChoice === 0 && computerChoice === 1 ||
+   humanChoice === 1 && computerChoice === 2 ||
+   humanChoice === 2 && computerChoice === 0);
+    console.log("You Lose!"); 
+*/   
+}; 
 
-else if ( 
- 
-  (humanChoice === "rock" && computerChoice === "scissor") ||
-  (humanChoice === "scissor" && computerChoice === "paper") ||
-  (humanChoice === "paper" && computerChoice === "rock") )
- { 
-  return console.log("You Win!");
- }
-
-else (
-
-  (humanChoice === "rock" && computerChoice === "rock") ||
-  (humanChoice === "scissor" && computerChoice === "scissor") ||
-  (humanChoice === "paper" && computerChoice === "paper") )
-{
-  return console.log("Tie!");
-}
-
-}
 
 playRound();
 
