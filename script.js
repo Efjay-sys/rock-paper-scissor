@@ -45,10 +45,13 @@ playGame();
 
 //-----------------Code Above Copied from Google as reference----------------//
   
-let choices = ["rock", "paper", "scissor"];
+// let choices = ["rock", "paper", "scissor"];
+// rock > paper
+// scissor > rock
+// scissor > paper
 
 
- let computerChoice = function() 
+ computerChoice = function() 
 {
   let choices = ["rock", "paper", "scissor"];
 
@@ -57,31 +60,31 @@ return choices[randomNumber];
 };
 console.log(computerChoice())
 
-let humanChoice = function()
+
+getHumanChoice = function()
 {
-let choices = ["rock", "paper", "scissor"];
-
+choices = ["rock", "paper", "scissor"];
 };
-humanChoice = window.prompt("Enter Selection");
-console.log(humanChoice)
-
-function playRound() {
-
-if (humanChoice === computerChoice);
-  {return "It is Tie!"};
-/*
-else  (
-
-   humanChoice === 0 && computerChoice === 1 ||
-   humanChoice === 1 && computerChoice === 2 ||
-   humanChoice === 2 && computerChoice === 0);
-    console.log("You Lose!"); 
-*/   
-}; 
+getHumanChoice.prompt("Enter Selection");
+getHumanChoice = getHumanChoice.toLowerCase();
 
 
+function playRound(getHumanChoice, computerChoice) {
+
+if (getHumanChoice === computerChoice) { 
+   return "It's a Tie!";
+  } else if (
+ (getHumanChoice === 'rock' && computerChoice === 'scissor') ||
+ (getHumanChoice === 'scissor' && computerChoice === 'paper') ||
+ (getHumanChoice === 'paper' && computerChoice === 'rock') 
+  ) {
+    return "you win! ${getHumanChoice} beats ${computerChoice}";
+  } else {
+    return 'you lose! ${computerChoice} beats ${getHumanChoice}.'; 
+  }
+};
 playRound();
-
+    
 /*#############*/
 
 const humanScore = 0;
