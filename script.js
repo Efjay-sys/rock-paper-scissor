@@ -45,45 +45,47 @@ playGame();
 
 //-----------------Code Above Copied from Google as reference----------------//
   
-// let choices = ["rock", "paper", "scissor"];
-// rock > paper
-// scissor > rock
-// scissor > paper
+ let choices = ["rock", "paper", "scissor"];
+ 
 
 
- computerChoice = function() 
+ getComputerChoice = function() 
 {
   let choices = ["rock", "paper", "scissor"];
 
   let randomNumber = Math.floor(Math.random() * 3)
 return choices[randomNumber];
 };
-console.log(computerChoice())
+console.log(getComputerChoice())
+
+function getHumanChoice() {choices};
+let humanSelection = getHumanChoice();
+
+humanSelection = window.prompt("Enter Selection");
+//humanSelection = getHumanChoice.toLowerCase();
 
 
-getHumanChoice = function()
-{
-choices = ["rock", "paper", "scissor"];
-};
-getHumanChoice.prompt("Enter Selection");
-getHumanChoice = getHumanChoice.toLowerCase();
+function playRound(humanSelection, computerSelection) {
 
-
-function playRound(getHumanChoice, computerChoice) {
-
-if (getHumanChoice === computerChoice) { 
+if (humanSelection === computerSelection) { 
    return "It's a Tie!";
   } else if (
- (getHumanChoice === 'rock' && computerChoice === 'scissor') ||
- (getHumanChoice === 'scissor' && computerChoice === 'paper') ||
- (getHumanChoice === 'paper' && computerChoice === 'rock') 
+ (humanSelection === 'rock' && computerSelection === 'scissor') ||
+ (humanSelection === 'scissor' && computerSelection === 'paper') ||
+ (humanSelection === 'paper' && computerSelection === 'rock') 
   ) {
-    return "you win! ${getHumanChoice} beats ${computerChoice}";
+    return `you win!, ${humanSelection}! beats ${computerSelection}`;
   } else {
-    return 'you lose! ${computerChoice} beats ${getHumanChoice}.'; 
+    return `you lose!, ${computerSelection}! beats ${humanSelection}.`; 
   }
-};
-playRound();
+}
+const computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
+
+console.log(playRound(humanSelection, computerSelection));
+
+
+
     
 /*#############*/
 
@@ -93,5 +95,8 @@ const tieScore = 0;
 
 /*#############*/
 
+function playGame()
+{
 
+} 
 
