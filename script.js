@@ -43,13 +43,14 @@ console.log(playRound(humanSelection, computerSelection));
     
 /*#############*/
   
-function playGame(playRound)
+function playGame()
 {
-  for (let i = 0; i < 5; i++) {
-        
+  for (let i = 0; i < 5; i++) 
+  {
+  
   };
 };
- 
-console.log(playGame());
+
+console.log(playGame());        
 
 /*#############*/
